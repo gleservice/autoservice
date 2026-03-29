@@ -6,16 +6,25 @@
   <title>GLE SERVICE — Автосервис</title>
   <style>
     body {margin:0; font-family:Arial; background:#0f0f0f; color:white;}
-    header {padding:60px 20px; text-align:center; background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70') center/cover;}
+    header {
+  padding: 100px 20px;
+  text-align: center;
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('8566b725-68b4-4041-b04b-2dedbc76ea4a.png') center/cover no-repeat;
+}
     header h1 {font-size:40px; margin:0;}
     header p {font-size:18px; margin:10px 0 20px;}
-    .btn {background:#e63946; padding:15px 30px; color:white; text-decoration:none; border-radius:8px; font-weight:bold;}
+    .btn {background:#e63946; padding:15px 30px; color:white; text-decoration:none; border-radius:8px; font-weight:bold; display:inline-block; margin-top:10px;}
     nav {display:flex; justify-content:center; gap:20px; padding:15px; background:#111;}
     nav a {color:white; text-decoration:none;}
     section {padding:60px 20px; max-width:1000px; margin:auto;}
     .cards {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
     .card {background:#1c1c1c; padding:20px; border-radius:12px;}
     .portfolio img {width:100%; border-radius:10px;}
+    .reviews {background:#1c1c1c; padding:20px; border-radius:12px; margin-bottom:15px;}
+    .qr {text-align:center; margin-top:20px;}
+    .qr img {width:200px;}
     footer {text-align:center; padding:30px; background:#111;}
   </style>
 </head>
@@ -23,41 +32,66 @@
 
 <header>
   <h1>GLE SERVICE</h1>
-  <p>Ремонт • Диагностика • Обслуживание</p>
-  <a class="btn" href="https://your-booking-link.com" target="_blank">Записаться онлайн</a>
+  <p>Ремонт • Диагностика • Обслуживание • Тюнинг • Доработка</p>
+  <a class="btn" href="https://dikidi.ru/2042402" target="_blank">Записаться онлайн</a>
 </header>
 
 <nav>
   <a href="#services">Услуги</a>
   <a href="#portfolio">Работы</a>
+  <a href="#reviews">Отзывы</a>
   <a href="#contacts">Контакты</a>
 </nav>
 
 <section id="services">
   <h2>Наши услуги</h2>
   <div class="cards">
-    <div class="card">Диагностика авто</div>
-    <div class="card">Замена масла</div>
-    <div class="card">Ремонт двигателя</div>
-    <div class="card">Подвеска и тормоза</div>
+    <div class="card">Диагностика подвески — 600₽</div>
+    <div class="card">Замена масла — от 800₽</div>
+    <div class="card">Ремонт двигателя — от 5000₽</div>
+    <div class="card">Ремонт подвески — от 1500₽</div>
+    <div class="card">Замена тормозных колодок — от 1000₽</div>
+    <div class="card">Компьютерная диагностика — 600₽</div>
+    <div class="card">Замена свечей зажигания — от 1000₽</div>
+    <div class="card">Улыбка клиента — БЕСЦЕННО!!!</div>
   </div>
 </section>
 
 <section id="portfolio">
   <h2>Наши работы</h2>
   <div class="cards portfolio">
-    <img src="https://images.unsplash.com/photo-1515923162035-7c0d1b6d9c02">
-    <img src="https://images.unsplash.com/photo-1493238792000-8113da705763">
-    <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
+    <img src="302e9d41-cec7-4eda-9ae5-d14d2f535b3d.jpg">
+    <img src="e641116d-2cf4-4b32-8fcf-700eb859c924.jpg">
+    <img src="c97b61d3-b91b-4dbf-8080-e789861b1226.jpg">
+    <img src="dca82fdc-00ea-4cbd-b6e5-d5e6db787e62.jpg">
+    <img src="58b0955d-9634-43fb-99d4-a6f525902487.jpg">
+    <img src="0dd7c917-cbe6-4a0b-9f98-f215169c71b9.jpg">
+    <img src="8e62bd35-c6ca-42dd-bf7c-b8ae533e07cd.jpg">
+
+    
   </div>
+</section>
+
+<section id="reviews">
+  <h2>Реальные отзывы клиентов</h2>
+  <div class="reviews">⭐️⭐️⭐️⭐️⭐️ Отличный сервис, цены прмемлемые, без обмана по ценам и срокам. Мастера перед новым годом починили ласточку, за что им огромное спасибо. Рекомендую.</div>
+  <div class="reviews">⭐️⭐️⭐️⭐️⭐️ Искал хороший сервис по отзывам на жби, приехал, все работы сделали на 5+, делают как себе, всем доволен, спасибо Кириллу за труд.</div>
+  <div class="reviews">⭐️⭐️⭐️⭐️⭐️ Быстро и качественно, консультация по интересующимся вопросам в обслуживании и ремонта любого автомобиля. Подбор запчастей, ответственный и профессиональный подход к выполнению работ! Рекомендую!</div>
+  <div class="reviews">⭐️⭐️⭐️⭐️⭐️ Обратился в данный сервис для устранения посторонних шумов подвески автомобиля. Грамотный и дружелюбный специалист, провел диагностику подвески и ходовой части, выявил недостатки, обговорили необходимость их ремонта и замены. Все заявленные работы выполнены в срок. Рекомендую.</div>
+  <div class="reviews">⭐️⭐️⭐️⭐️⭐️ Надо было проверить что стучит при торможении, при этом особо ничего не трогать, т.к машина на гарантии. Созвонился, объяснил ситуацию, в этот же день приехал, подняли и посмотрели. Спасибо большое мастеру, как только слечу с гарантии, буду там обслуживаться.</div>
 </section>
 
 <section id="contacts">
   <h2>Контакты</h2>
   <p>📞 +7 993 105 96 96</p>
   <p>📍 г.Екатеринбург ул.Бетонщиков 5/29</p>
-  <br>
-  <a class="btn" href="https://your-booking-link.com" target="_blank">Записаться</a>
+
+  <div class="qr">
+    <p>Сканируй QR и записывайся:</p>
+    <img src="qrcod_cBCd.png">
+  </div>
+
+  <a class="btn" href="https://dikidi-link.com" target="_blank">Записаться</a>
 </section>
 
 <footer>
