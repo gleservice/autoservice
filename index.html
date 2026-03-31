@@ -1,108 +1,277 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GLE SERVICE — Автосервис</title>
-  <style>
-    body {margin:0; font-family:Arial; background:#0f0f0f; color:white;}
-    header {
-  padding: 100px 20px;
-  text-align: center;
-  background: 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GLE SERVICE</title>
+
+<style>
+body {
+  margin:0;
+  font-family:Arial;
+  background:#0f0f0f;
+  color:white;
+}
+
+/* АНИМАЦИЯ */
+.fade {
+  opacity:0;
+  transform:translateY(20px);
+  animation:fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  to {opacity:1; transform:translateY(0);}
+}
+
+header {
+  padding:100px 20px;
+  text-align:center;
+  background:
     linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
     url('header.png') center/cover no-repeat;
 }
-    header h1 {font-size:40px; margin:0;}
-    header p {font-size:18px; margin:10px 0 20px;}
-    .btn {background:#e63946; padding:15px 30px; color:white; text-decoration:none; border-radius:8px; font-weight:bold; display:inline-block; margin-top:10px;}
-    nav {display:flex; justify-content:center; gap:20px; padding:15px; background:#111;}
-    nav a {color:white; text-decoration:none;}
-    section {padding:60px 20px; max-width:1000px; margin:auto;}
-    .cards {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px;}
-    .card {background:#1c1c1c; padding:20px; border-radius:12px;}
-    .portfolio img {width:100%; border-radius:10px;}
-    .reviews {background:#1c1c1c; padding:20px; border-radius:12px; margin-bottom:15px;}
-    .qr {text-align:center; margin-top:20px;}
-    .qr img {width:200px;}
-    footer {text-align:center; padding:30px; background:#111;}
-  </style>
+
+h2 {text-align:center;}
+
+.btn {
+  background:#ff2e2e;
+  padding:15px 30px;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  display:inline-block;
+  margin-top:10px;
+}
+
+nav {
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  padding:15px;
+  background:#111;
+}
+
+nav a {color:white; text-decoration:none;}
+
+section {
+  padding:60px 20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+/* УСЛУГИ */
+.services {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.service {
+  height:180px;
+  border-radius:12px;
+  display:flex;
+  align-items:end;
+  background-size:cover;
+  overflow:hidden;
+}
+
+.overlay {
+  width:100%;
+  padding:15px;
+  background:rgba(0,0,0,0.6);
+}
+
+/* ПОРТФОЛИО */
+.portfolio {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
+
+.portfolio img {
+  width:100%;
+  border-radius:10px;
+}
+
+/* СЛАЙДЕР ДО/ПОСЛЕ */
+.slider {
+  position:relative;
+  max-width:600px;
+  margin:auto;
+}
+
+.slider img {
+  width:100%;
+  display:block;
+}
+
+.slider .after {
+  position:absolute;
+  top:0;
+  left:0;
+  width:50%;
+  overflow:hidden;
+}
+
+input[type=range] {
+  width:100%;
+}
+
+/* ОТЗЫВЫ */
+.review {
+  background:#1c1c1c;
+  padding:20px;
+  border-radius:10px;
+  margin-bottom:15px;
+  border-left:4px solid #ff2e2e;
+}
+
+/* СОЦ */
+.socials {
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+}
+
+.socials a {
+  background:#ff2e2e;
+  padding:12px;
+  border-radius:50%;
+  text-align:center;
+  color:white;
+  text-decoration:none;
+}
+
+/* ЗВОНОК */
+.call-btn {
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  background:#25D366;
+  padding:15px;
+  border-radius:50%;
+  color:white;
+  text-decoration:none;
+  font-size:20px;
+}
+
+/* QR */
+.qr img {width:200px;}
+
+footer {
+  text-align:center;
+  padding:30px;
+  background:#111;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <h1>GLE SERVICE</h1>
-  <p>Ремонт • Диагностика • Обслуживание • Тюнинг • Доработка</p>
-  <a class="btn" href="https://dikidi.ru/2042402" target="_blank">Записаться онлайн</a>
+<header class="fade">
+<h1>GLE SERVICE</h1>
+<p>Ремонт • Диагностика • Тюнинг</p>
+<a class="btn" href="https://dikidi.ru/2042402">Записаться онлайн</a>
 </header>
 
 <nav>
-  <a href="#services">Услуги</a>
-  <a href="#portfolio">Работы</a>
-  <a href="#reviews">Отзывы</a>
-  <a href="#contacts">Контакты</a>
+<a href="#services">Услуги</a>
+<a href="#portfolio">Работы</a>
+<a href="#reviews">Отзывы</a>
+<a href="#contacts">Контакты</a>
 </nav>
 
-<section id="services">
-  <h2>Наши услуги</h2>
-  <div class="cards">
-    <div class="card">Диагностика подвески — 600₽</div>
-    <div class="card">Замена масла — от 800₽</div>
-    <div class="card">Ремонт двигателя — от 5000₽</div>
-    <div class="card">Ремонт подвески — от 1500₽</div>
-    <div class="card">Замена тормозных колодок — от 1000₽</div>
-    <div class="card">Компьютерная диагностика — 600₽</div>
-    <div class="card">Замена свечей зажигания — от 1000₽</div>
-    <div class="card">Улыбка клиента — БЕСЦЕННО!!!</div>
-  </div>
+<section id="services" class="fade">
+<h2>Наши услуги</h2>
+<div class="services">
+
+<div class="service" style="background:url('work1.jpg')">
+<div class="overlay">Диагностика — 600₽</div>
+</div>
+
+<div class="service" style="background:url('work2.jpg')">
+<div class="overlay">Замена масла</div>
+</div>
+
+<div class="service" style="background:url('work3.jpg')">
+<div class="overlay">Ремонт двигателя</div>
+</div>
+
+<div class="service" style="background:url('work4.jpg')">
+<div class="overlay">Подвеска</div>
+</div>
+
+</div>
 </section>
 
-<section id="portfolio">
-  <h2>Наши работы</h2>
-  <div class="cards portfolio">
-    <img src="work1.jpg">
-    <img src="work2.jpg">
-    <img src="work3.jpg">
-    <img src="work4.jpg">
-    <img src="work5.jpg">
-    <img src="work6.jpg">
-    <img src="work8.jpg">
-    <img src="work9.jpg">
-    <img src="work10.jpg">
-    <img src="work11.jpg">
-    <img src="work12.jpg">
-    <img src="work13.jpg">
-    <img src="work14.jpg">
+<section class="fade">
+<h2>До / После</h2>
 
-    
+<div class="slider">
+  <img src="before.jpg">
+  <div class="after">
+    <img src="after.jpg">
   </div>
+</div>
+
+<input type="range" min="0" max="100" value="50" oninput="
+this.previousElementSibling.querySelector('.after').style.width=this.value+'%';
+">
 </section>
 
-<section id="reviews">
-  <h2>Реальные отзывы клиентов</h2>
-  <div class="reviews">⭐️⭐️⭐️⭐️⭐️ Отличный сервис, цены прмемлемые, без обмана по ценам и срокам. Мастера перед новым годом починили ласточку, за что им огромное спасибо. Рекомендую.</div>
-  <div class="reviews">⭐️⭐️⭐️⭐️⭐️ Искал хороший сервис по отзывам на жби, приехал, все работы сделали на 5+, делают как себе, всем доволен, спасибо Кириллу за труд.</div>
-  <div class="reviews">⭐️⭐️⭐️⭐️⭐️ Быстро и качественно, консультация по интересующимся вопросам в обслуживании и ремонта любого автомобиля. Подбор запчастей, ответственный и профессиональный подход к выполнению работ! Рекомендую!</div>
-  <div class="reviews">⭐️⭐️⭐️⭐️⭐️ Обратился в данный сервис для устранения посторонних шумов подвески автомобиля. Грамотный и дружелюбный специалист, провел диагностику подвески и ходовой части, выявил недостатки, обговорили необходимость их ремонта и замены. Все заявленные работы выполнены в срок. Рекомендую.</div>
-  <div class="reviews">⭐️⭐️⭐️⭐️⭐️ Надо было проверить что стучит при торможении, при этом особо ничего не трогать, т.к машина на гарантии. Созвонился, объяснил ситуацию, в этот же день приехал, подняли и посмотрели. Спасибо большое мастеру, как только слечу с гарантии, буду там обслуживаться.</div>
+<section id="portfolio" class="fade">
+<h2>Наши работы</h2>
+<div class="portfolio">
+<img src="work1.jpg">
+<img src="work2.jpg">
+<img src="work3.jpg">
+<img src="work4.jpg">
+</div>
 </section>
 
-<section id="contacts">
-  <h2>Контакты</h2>
-  <p>📞 +7 993 105 96 96</p>
-  <p>📍 г.Екатеринбург ул.Бетонщиков 5/29</p>
+<section id="reviews" class="fade">
+<h2>Отзывы</h2>
 
-  <div class="qr">
-    <p>Сканируй QR и записывайся:</p>
-         <img src="qr.png">
-  </div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️ Отличный сервис — BMW X5</div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️ Всё сделали быстро</div>
 
-  <a class="btn" href="https://dikidi.ru/2042402" target="_blank">Записаться</a>
+</section>
+
+<section id="contacts" class="fade">
+<h2>Контакты</h2>
+
+<p>📞 +7 993 105 96 96</p>
+<p>📍 Екатеринбург</p>
+
+<div class="qr">
+<img src="qr.png">
+</div>
+
+<a class="btn" href="https://dikidi.ru/2042402">Записаться</a>
+
+<br><br>
+
+<iframe src="https://maps.google.com/maps?q=Екатеринбург&output=embed"
+width="100%" height="300"></iframe>
+
 </section>
 
 <footer>
-  <p>© 2026 GLE SERVICE</p>
+<p>© 2026 GLE SERVICE</p>
 </footer>
+
+<!-- КНОПКИ -->
+<div class="socials">
+<a href="https://wa.me/79931059696">W</a>
+<a href="https://t.me/yourname">T</a>
+<a href="https://vk.com/yourpage">VK</a>
+</div>
+
+<a class="call-btn" href="tel:+79931059696">📞</a>
 
 </body>
 </html>
