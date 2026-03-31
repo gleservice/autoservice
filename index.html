@@ -128,13 +128,13 @@ input[type=range] {
 }
 
 /* СОЦ */
-.socials {
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  display:flex;
-  flex-direction:column;
-  gap:10px;
+  .socials a {
+  background:#ff2e2e;
+  padding:14px;
+  border-radius:50%;
+  color:white;
+  font-size:20px;
+  text-align:center;
 }
 
 .socials a {
@@ -160,12 +160,13 @@ input[type=range] {
 }
 
 /* QR */
-.qr img {width:200px;}
-
-footer {
+.qr {
   text-align:center;
-  padding:30px;
-  background:#111;
+}
+
+.qr img {
+  display:block;
+  margin:0 auto;
 }
 </style>
 </head>
@@ -174,7 +175,7 @@ footer {
 
 <header class="fade">
 <h1>GLE SERVICE</h1>
-<p>Ремонт • Диагностика • Тюнинг</p>
+<p>Ремонт • Диагностика • Обслуживание • Тюнинг • Доработка</p>
 <a class="btn" href="https://dikidi.ru/2042402">Записаться онлайн</a>
 </header>
 
@@ -225,20 +226,31 @@ this.previousElementSibling.querySelector('.after').style.width=this.value+'%';
 
 <section id="portfolio" class="fade">
 <h2>Наши работы</h2>
-<div class="portfolio">
-<img src="work1.jpg">
-<img src="work2.jpg">
-<img src="work3.jpg">
-<img src="work4.jpg">
+ <div class="cards portfolio">
+    <img src="work1.jpg">
+    <img src="work2.jpg">
+    <img src="work3.jpg">
+    <img src="work4.jpg">
+    <img src="work5.jpg">
+    <img src="work6.jpg">
+    <img src="work8.jpg">
+    <img src="work9.jpg">
+    <img src="work10.jpg">
+    <img src="work11.jpg">
+    <img src="work12.jpg">
+    <img src="work13.jpg">
+    <img src="work14.jpg">
 </div>
 </section>
 
 <section id="reviews" class="fade">
 <h2>Отзывы</h2>
 
-<div class="review">⭐️⭐️⭐️⭐️⭐️ Отличный сервис — BMW X5</div>
-<div class="review">⭐️⭐️⭐️⭐️⭐️ Всё сделали быстро</div>
-
+<div class="review">⭐️⭐️⭐️⭐️⭐️ Отличный сервис, цены прмемлемые, без обмана по ценам и срокам. Мастера перед новым годом починили ласточку, за что им огромное спасибо. Рекомендую.</div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️ Искал хороший сервис по отзывам на жби, приехал, все работы сделали на 5+, делают как себе, всем доволен, спасибо Кириллу за труд.</div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️ Быстро и качественно, консультация по интересующимся вопросам в обслуживании и ремонта любого автомобиля. Подбор запчастей, ответственный и профессиональный подход к выполнению работ! Рекомендую!</div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️ Обратился в данный сервис для устранения посторонних шумов подвески автомобиля. Грамотный и дружелюбный специалист, провел диагностику подвески и ходовой части, выявил недостатки, обговорили необходимость их ремонта и замены. Все заявленные работы выполнены в срок. Рекомендую.</div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️ Надо было проверить что стучит при торможении, при этом особо ничего не трогать, т.к машина на гарантии. Созвонился, объяснил ситуацию, в этот же день приехал, подняли и посмотрели. Спасибо большое мастеру, как только слечу с гарантии, буду там обслуживаться.</div>
 </section>
 
 <section id="contacts" class="fade">
@@ -248,14 +260,19 @@ this.previousElementSibling.querySelector('.after').style.width=this.value+'%';
 <p>📍 Екатеринбург</p>
 
 <div class="qr">
-<img src="qr.png">
+  <p>Сканируй QR и записывайся:</p>
+  <img src="qr.png">
+
+  <br><br>
+
+  <a class="btn" href="https://dikidi.ru/2042402">
+    Записаться онлайн
+  </a>
 </div>
-
-<a class="btn" href="https://dikidi.ru/2042402">Записаться</a>
-
+  
 <br><br>
 
-<iframe src="https://maps.google.com/maps?q=Екатеринбург&output=embed"
+<iframe src="<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d233.83776648346608!2d60.697678700125024!3d56.82955270837888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x43c16c6d4b7bb50f%3A0x7716636e1471222c!2z0YPQuy4g0JHQtdGC0L7QvdGJ0LjQutC-0LIsIDUvMjksINCV0LrQsNGC0LXRgNC40L3QsdGD0YDQsywg0KHQstC10YDQtNC70L7QstGB0LrQsNGPINC-0LHQuy4sIDYyMDA3Mg!5e0!3m2!1sru!2sru!4v1774996636092!5m2!1sru!2sru" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"
 width="100%" height="300"></iframe>
 
 </section>
@@ -266,9 +283,9 @@ width="100%" height="300"></iframe>
 
 <!-- КНОПКИ -->
 <div class="socials">
-<a href="https://wa.me/79931059696">W</a>
-<a href="https://t.me/yourname">T</a>
-<a href="https://vk.com/yourpage">VK</a>
+  <a href="https://wa.me/79931059696"><i class="fab fa-whatsapp"></i></a>
+  <a href="https://t.me/yourname"><i class="fab fa-telegram"></i></a>
+  <a href="https://vk.com/yourpage"><i class="fab fa-vk"></i></a>
 </div>
 
 <a class="call-btn" href="tel:+79931059696">📞</a>
