@@ -160,13 +160,12 @@ input[type=range] {
 }
 
 /* QR */
-.qr {
-  text-align:center;
-}
+.qr img {width:200px;}
 
-.qr img {
-  display:block;
-  margin:0 auto;
+footer {
+  text-align:center;
+  padding:30px;
+  background:#111;
 }
 </style>
 </head>
@@ -278,9 +277,10 @@ this.previousElementSibling.querySelector('.after').style.width=this.value+'%';
 <p>📍 Екатеринбург</p>
 
 <div class="qr">
-  <p>Сканируй QR и записывайся:</p>
-  <img src="qr.png">
-
+  <div class="qr">
+    <p>Сканируй QR и записывайся:</p>
+         <img src="qr.png">
+  </div>
   <br><br>
 
   <a class="btn" href="https://dikidi.ru/2042402">
