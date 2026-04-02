@@ -42,14 +42,12 @@ h2 {text-align:center;}
   border-radius:8px;
   display:inline-block;
   margin-top:10px;
+  cursor:pointer;
 }
-
-nav {
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  padding:15px;
-  background:#111;
+  .btn:hover {
+  background:#ff4444;
+  transform:scale(1.05);
+  transition:0.2s;
 }
 
 nav a {color:white; text-decoration:none;}
@@ -291,17 +289,11 @@ this.previousElementSibling.querySelector('.after').style.width=this.value+'%';
 
 <div class="qr-section">
   <img src="qr.png" alt="Сканируй QR и записывайся" class="qr">
-  <button class="btn">Записаться</button>
-</div>
+    <a class="btn" href="https://dikidi.ru/2042402">
+    Записаться
+  </a>
   
   <br><br>
-
-  <a class="btn" href="https://dikidi.ru/2042402">
-    Записаться онлайн
-  </a>
-</div>
-  
-<br><br>
 
 <iframe 
   src="https://yandex.ru/map-widget/v1/?text=Екатеринбург%20Бетонщиков%205/29"
@@ -317,7 +309,6 @@ this.previousElementSibling.querySelector('.after').style.width=this.value+'%';
 </footer>
 
 <!-- КНОПКИ -->
-.socials
 <div class="socials">
   <a href="https://wa.me/79931059696"><i class="fab fa-whatsapp"></i></a>
   <a href="https://t.me/yourname"><i class="fab fa-telegram"></i></a>
